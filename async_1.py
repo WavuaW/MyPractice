@@ -12,8 +12,12 @@ async def print_numbers():
         await asyncio.sleep(0.25)
 
 async def main():
+    #when you create a task and a coroutine returns a value this is called a Future(similar to promise in javascript)
     task1 = asyncio.create_task(fetch_data())
     task2 = asyncio.create_task(print_numbers())
+    
+    #if you want the value returned form a coroutine you must await that coroutine/task
+    value = await task1
 
 
 asyncio.run(main())
