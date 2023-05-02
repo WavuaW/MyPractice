@@ -4,7 +4,12 @@ import asyncio
 
 async def main():
     print('Tim')
-#async event-loop
+    await foo('Text')
+    print('Finished')
+async def foo(text):
+    print(text)
+    #using await - required to run a coroutine
+    await asyncio.sleep(2)
 
-#the coroutine becomes the entry point to the program
+#this creates the coroutine and becomes the entry point to the program
 asyncio.run(main())
