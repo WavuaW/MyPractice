@@ -8,12 +8,12 @@ async def main():
     task = asyncio.create_task(foo('Text'))
     #awaits the two second wait time
     # await task
-    await asyncio.sleep(5)
+    await asyncio.sleep(0.5)
     print('Finished')
 async def foo(text):
     print(text)
     #using await - required to run a coroutine
-    await asyncio.sleep(2)
+    await asyncio.sleep(10)
 
 #this creates the coroutine and becomes the entry point to the program
 asyncio.run(main())
