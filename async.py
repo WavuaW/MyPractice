@@ -4,7 +4,11 @@ import asyncio
 
 async def main():
     print('Tim')
-    await foo('Text')
+    #creating a task, the real power of asynchronous programming 
+    task = asyncio.create_task(foo('Text'))
+    #awaits the two second wait time
+    # await task
+    await asyncio.sleep(5)
     print('Finished')
 async def foo(text):
     print(text)
