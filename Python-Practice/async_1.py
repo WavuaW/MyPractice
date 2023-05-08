@@ -22,5 +22,6 @@ async def main():
     value = await task1
     print(value)
     await task2
+    #printing out
 
 asyncio.run(main())
