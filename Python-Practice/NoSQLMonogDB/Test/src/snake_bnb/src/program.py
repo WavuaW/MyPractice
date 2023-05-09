@@ -1,10 +1,11 @@
 from colorama import Fore
 import program_guests
 import program_hosts
-import data.mongo_setup as mongo_setup
+import data.mongo_setup as mongo_setup # from the mongo_setup.py file
 
 
 def main():
+    #Connection registration, you MUST initialize this once in the program before we interact with anything else
     mongo_setup.global_init()
 
     print_header()
