@@ -1,0 +1,8 @@
+A type of noSQL database that stores information in key value pairs as opposed to relationship databases our
+documnet based databases such as MongoDB
+
+ttl - time to live
+SET name kyle - this created a bew key value pair/
+GET name - returns the value stored 
+DEL name - deletes the record 
+flushall - deletes everything 
