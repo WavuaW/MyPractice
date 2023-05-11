@@ -1,8 +1,24 @@
 A type of noSQL database that stores information in key value pairs as opposed to relationship databases our
 documnet based databases such as MongoDB
 
-ttl - time to live
-SET name kyle - this created a bew key value pair/
+SET name kyle - this created a bew key value pair
 GET name - returns the value stored 
 DEL name - deletes the record 
 flushall - deletes everything 
+ttl - time to live
+expire name 10 - expires the name record in 10 seconds 
+setex name 10 kyle - creates a key value pair with an expiration of 10 seconds.
+lpush - add an item to the start of a list l - stands for left,
+rpush - similar to lpush but from the right
+lrange friends 0 -1 - GET only works for strings therefore when trying to see what is stored in a list we use lrange.
+lpop - removes the thing on the left side and returns it to us
+rpop - removes the thing on the right side and returns it to us
+SADD - used for SETs which are arrays that are completely unique and have no predetermined structure around the data.
+SMEMBERS - returns the contents of the sete
+SREM hobbies - removes the item that has been specified
+HSET - using hashes - no nesting at all, 
+HGET
+HGETALL
+HDEL
+HEXSIST
+
