@@ -8,10 +8,14 @@ def main_request(baseurl, endpoint):
     r = requests.get(baseurl + endpoint)
     return r.json()
 
+def get_pages(response):
+    return response['info']['pages']
+
 
 data = main_request(baseurl, endpoint)
+print(get_pages(data))
 
-pages = data['info']['pages']
+
 
 name = data['results'][0]['name']
 

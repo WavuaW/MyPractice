@@ -15,3 +15,4 @@ name = data['results'][0]['name']
 episodes = data['results'][0]['episode']
 
 print(len(episodes))
+print(name)
