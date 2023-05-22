@@ -15,4 +15,5 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
     
 for n in range(1, 501):
-    print(n, ';', fibonacci(n))
+    # print(n, ';', fibonacci(n))
+    print(fibonacci(n+1) / fibonacci(n))
