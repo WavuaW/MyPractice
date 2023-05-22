@@ -25,6 +25,9 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.divide(5, 10, 5), 2)
         self.assertEqual(calc.divide(5, -1, 1), -1)
         self.assertEqual(calc.divide(5, -1, -1), 1)
+        self.assertEqual(calc.divide(5, 5, 2), 2.5)
+
+        self.assertRaises(ValueError, calc.divide, 10, 10, 0)
 
 
 
