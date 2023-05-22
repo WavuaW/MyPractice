@@ -7,4 +7,8 @@ test suite - A test suite is a collection of test cases, test suites or both. Us
 test runner - a component whic orchestrates the execution of tests and provides the outcome to the user
 
 A testcase is created by subclassing unnittest.TestCase TestStringMetods(unnittest.TestCase)
-Tests are created by defining methods whose names start with the letters 'test' e.g def test_upper(self)
+Tests are created by defining methods whose names start with the letters 'test' e.g def test_upper(self) This naming convention informs the test runner about which methods represent tests.
+
+The setUp() and tearDown methods allow you to define instructions that will be executed before and after test method.
+
+The unittest method can be used from the command line to run tests from modules, classes, or even individual test methods.
