@@ -1,0 +1,7 @@
+test fixture - represents the preparation needed tp perform one or more tests and any associated cleanup actions.
+
+test case - is the individual unit of testing. Checks for soecific responses to a particular set of inputs.
+
+test suite - A test suite is a collection of test cases, test suites or both. Used to aggregate tests thet should be executed toghether.
+
+test runner - a component whic orchestrates the execution of tests and provides the outcome to the user
