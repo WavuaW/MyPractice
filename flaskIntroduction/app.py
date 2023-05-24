@@ -7,6 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # //// - is an absol
 db = SQLAlchemy(app)
 
 
+
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -20,7 +21,7 @@ class Todo(db.Model):
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
-        new_task = Todo(content, task_content)
+        new_task = Todo(content=task_content)
 
         try:
             db.session.add(new_task)
@@ -35,5 +36,5 @@ def index():
     
 
 if __name__ == "__main__":
-    app.run(port=8080, debug=True)
+    app.run(port=5000, debug=True)
 
