@@ -1,5 +1,11 @@
 import logging
 
+logger = logging.getLogger(__name__)
+
+file_handler = logging.FileHandler('employee.log')
+
+logger.addHandler(file_handler)
+
 logging.basicConfig(filename='employee.log', level=logging.INFO,
                     format="%(asctime)s:%(levelname)s:%(message)s")
 
@@ -10,7 +16,7 @@ class Employee:
         self.first = first 
         self.last = last
 
-        logging.info('Created Employee: {} - {}'.format(self.fullname, self.email))
+        logger.info('Created Employee: {} - {}'.format(self.fullname, self.email))
 
     @property
     def email(self):
