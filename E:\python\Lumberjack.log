@@ -1,2 +1,6 @@
-INFO:root:Our first message
-INFO 2023-05-25 10:46:16,116 - Our first message
+INFO 2023-05-25 10:51:20,330 - Our SECOND message after implementting overwrite
+DEBUG 2023-05-25 10:51:20,330 - This is a harmless debug message
+INFO 2023-05-25 10:51:20,330 - Some useful info
+WARNING 2023-05-25 10:51:20,330 - I'm sorry, but I can't do that, Dave.
+ERROR 2023-05-25 10:51:20,330 - Did you just try to divide by zero?
+CRITICAL 2023-05-25 10:51:20,330 - The entire internet is down!!
