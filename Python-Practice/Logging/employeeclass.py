@@ -1,13 +1,15 @@
 import logging
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
 
 file_handler = logging.FileHandler('employee.log')
+file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-logging.basicConfig(filename='employee.log', level=logging.INFO,
-                    format="%(asctime)s:%(levelname)s:%(message)s")
 
 class Employee:
     """A simple employee class"""
