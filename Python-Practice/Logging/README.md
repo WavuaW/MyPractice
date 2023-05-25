@@ -10,3 +10,4 @@ In the logging module, the six constants are:
     ERROR - 40
     CRITICAL - 50
 
+The default is warning, this means it will catch everything > 30

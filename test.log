@@ -1,0 +1,8 @@
+DEBUG:root:Add: 10 + 5 = 20
+DEBUG:root:Sub: 10 - 5 = 5
+DEBUG:root:Mul: 10 * 5 = 50
+DEBUG:root:Div: 10 + 5 = 2.0
+DEBUG:root:Add: 20 + 10 = 40
+DEBUG:root:Sub: 20 - 10 = 10
+DEBUG:root:Mul: 20 * 10 = 200
+DEBUG:root:Div: 20 + 10 = 2.0
