@@ -1,0 +1,1 @@
+bcrypt being slow, hashing + salt. Comes highly recommend and is A tier
