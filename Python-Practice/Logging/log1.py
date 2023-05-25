@@ -37,5 +37,5 @@ def quadratic_formula(a, b, c):
     logger.debug("# Return the roots")
     return (root1, root2)
 
-roots = quadratic_formula(1, 0, -4)
+roots = quadratic_formula(1, 0, 1)
 print(roots)
