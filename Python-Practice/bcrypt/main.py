@@ -4,4 +4,7 @@ password = b"SecretPass69"
 
 hashed = bcrypt.hashpw(password, bcrypt.gensalt())
 
-print(hashed)
+if bcrypt.checkpw(password, hashed):
+    print('Match')
+else:
+    print('Try Again Loser')
