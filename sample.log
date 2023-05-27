@@ -6,3 +6,38 @@
 2023-05-25 19:07:37,234:__main__:Sub: 20 - 10 = 10
 2023-05-25 19:07:37,234:__main__:Mul: 20 * 10 = 200
 2023-05-25 19:07:37,234:__main__:Div: 20 + 10 = 2.0
+2023-05-25 19:14:06,497:__main__:Add: 20 + 0 = 40
+2023-05-25 19:14:06,497:__main__:Sub: 20 - 0 = 20
+2023-05-25 19:14:06,497:__main__:Mul: 20 * 0 = 0
+2023-05-25 19:14:06,497:__main__:Tried to divide by zero
+2023-05-25 19:14:06,497:__main__:Div: 20 + 0 = None
+2023-05-25 19:20:08,310:__main__:Add: 20 + 0 = 40
+2023-05-25 19:20:08,310:__main__:Sub: 20 - 0 = 20
+2023-05-25 19:20:08,310:__main__:Mul: 20 * 0 = 0
+2023-05-25 19:20:08,310:__main__:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/chriswavua/ChrisP/PyPractice/Python-Practice/Logging/cslogging.py", line 26, in divide
+    result = x / y
+             ~~^~~
+ZeroDivisionError: division by zero
+2023-05-25 19:20:08,312:__main__:Div: 20 + 0 = None
+2023-05-25 19:23:18,194:__main__:Add: 20 + 0 = 40
+2023-05-25 19:23:18,194:__main__:Sub: 20 - 0 = 20
+2023-05-25 19:23:18,194:__main__:Mul: 20 * 0 = 0
+2023-05-25 19:23:18,195:__main__:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/chriswavua/ChrisP/PyPractice/Python-Practice/Logging/cslogging.py", line 27, in divide
+    result = x / y
+             ~~^~~
+ZeroDivisionError: division by zero
+2023-05-25 19:23:18,197:__main__:Div: 20 + 0 = None
+2023-05-25 19:25:05,938:__main__:Add: 20 + 0 = 40
+2023-05-25 19:25:05,938:__main__:Sub: 20 - 0 = 20
+2023-05-25 19:25:05,938:__main__:Mul: 20 * 0 = 0
+2023-05-25 19:25:05,938:__main__:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/chriswavua/ChrisP/PyPractice/Python-Practice/Logging/cslogging.py", line 29, in divide
+    result = x / y
+             ~~^~~
+ZeroDivisionError: division by zero
+2023-05-25 19:25:05,939:__main__:Div: 20 + 0 = None

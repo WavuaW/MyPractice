@@ -9,8 +9,11 @@ formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
 file_handler = logging.FileHandler('sample.log')
 file_handler.setFormatter(formatter)
 
-logger.addHandler(file_handler)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
 
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 def add(x, y):
     return x + y 
@@ -22,10 +25,15 @@ def multiply(x, y):
     return x * y
 
 def divide(x , y):
-    return x / y
+    try:
+       result = x / y
+    except ZeroDivisionError:
+        logger.exception('Tried to divide by zero')
+    else:
+        return result
 
 num_1 = 20
-num_2 = 10
+num_2 = 0
 
 add_result = add(num_1, num_1)
 logger.debug('Add: {} + {} = {}'.format(num_1, num_2, add_result))
