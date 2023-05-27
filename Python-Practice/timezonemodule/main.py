@@ -20,5 +20,14 @@ current_timezone = pytz.timezone("US/Eastern")
 target_timezone = pytz.timezone("Europe/Vienna")
 
 localized_newyork = current_timezone.localize(datetime_newyork)
+datetime_vienna = localized_newyork.astimezone(target_timezone)
 
+print(datetime_newyork)
 print(localized_newyork)
+print(datetime_vienna)
+
+print(datetime_vienna.replace(tzinfo=None))
+print(datetime_vienna.timetz())
+
+print(pytz.all_timezones)
+
