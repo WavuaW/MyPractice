@@ -29,5 +29,8 @@ print(datetime_vienna)
 print(datetime_vienna.replace(tzinfo=None))
 print(datetime_vienna.timetz())
 
-print(pytz.all_timezones)
+# print(pytz.all_timezones)
+
+print(localized_newyork.tzname())
+print(localized_newyork.utcoffset())
 
