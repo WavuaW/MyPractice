@@ -20,7 +20,7 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 local_css("style/style.css")
 with st.container():
-    st.subheader("Hi, I am Chris :alien_monster:")
+    st.subheader("Hi, I am Chris :two_hearts:")
     st.title("A Future Data Scientist From Kenya")
     st.write("I am passionate about tech and finding solutions and innovations related to tech")
     st.write("[Learn More >](https://www.webfx.com/tools/emoji-cheat-sheet/)")
