@@ -40,7 +40,8 @@ session = Session()
 # session.commit()
 
 # results = session.query(Person).all()
-results = session.query(Person).filter(Person.lastname == "Tendo")
+# results = session.query(Person).filter(Person.lastname == "Tendo")
+results = session.query(Person).filter(Person.firstname.like("%l%"))
 
 for r in results:
     print(r)
