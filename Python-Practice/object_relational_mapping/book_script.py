@@ -31,8 +31,16 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # person = Person(12312, "Chris", "Tendo", "M", 55)
-# session.add(person)
+# p1 = Person(57546, "Charles", "Rain", "M", 73)
+# p2 = Person(33809, "Clivon", "Rain", "M", 25)
+# p3 = Person(27400, "Onesmus", "Tendo", "M", 31)
+# session.add(p1)
+# session.add(p2)
+# session.add(p3)
 # session.commit()
 
-results = session.query(Person).all()
-print(results)
+# results = session.query(Person).all()
+results = session.query(Person).filter(Person.lastname == "Tendo")
+
+for r in results:
+    print(r)
