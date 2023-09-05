@@ -23,3 +23,16 @@ class Person(Base):
     
     def __repr__(self):
         return f"({self.ssn}) {self.firstname} {self.lastname} ({self.gender}, {self.age})"
+    
+engine = create_engine("sqlite:///mydb.db", echo=True)
+Base.metadata.create_all(bind=engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+# person = Person(12312, "Chris", "Tendo", "M", 55)
+# session.add(person)
+# session.commit()
+
+results = session.query(Person).all()
+print(results)
