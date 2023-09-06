@@ -4,6 +4,26 @@ from flask import Flask, session, request, redirect, url_for
 # To set cookies use the set_cookie methodof response objects.
 # if you want to use sessions, do not use the cookies directy but use the Sessions in flask to add some security on top of the cookies for you.
 
+# Reading cookies:
+
+# from flask import request
+
+# @app.route('/')
+# def index():
+#     username = request.cookies.get('username')
+#     # use cookies.get(key) instead of cookies[key] to not get a
+#     # KeyError if the cookie is missing.
+
+# Storing cookies:
+
+# from flask import make_response
+
+# @app.route('/')
+# def index():
+#     resp = make_response(render_template(...))
+#     resp.set_cookie('username', 'the username')
+#     return resp
+
 app = Flask(__name__)
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
