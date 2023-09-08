@@ -15,6 +15,7 @@ def login():
         session.permanent = True  
         user = request.form['nm']
         session['user'] = user
+        flash("Login Successful")
         return redirect(url_for("user"))
     else:
         if 'user' in session:
@@ -25,7 +26,7 @@ def login():
 def user():
     if "user" in session:
         user = session["user"]
-        return f"<h1>{user}</h1>"
+        return render_template('user.html', user=user)
     else:
         return redirect(url_for('login'))
 
