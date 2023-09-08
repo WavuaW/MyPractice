@@ -19,6 +19,7 @@ def login():
         return redirect(url_for("user"))
     else:
         if 'user' in session:
+            flash("Already Logged in")
             return redirect(url_for('user'))
         return render_template('login.html')
 
@@ -28,6 +29,7 @@ def user():
         user = session["user"]
         return render_template('user.html', user=user)
     else:
+        flash("You are not Logged In")
         return redirect(url_for('login'))
 
 @app.route('/logout')
