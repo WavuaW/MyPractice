@@ -30,7 +30,11 @@ def user():
         user = session["user"]
         if request.method == 'POST':
             email = request.form['email']
-        return render_template('user.html', user=user)
+            session['emIL'] = email
+        else:
+            if 'email' in session:
+                email = session['email']
+        return render_template('user.html', emIL=EMAIL)
     else:
         flash("You are not Logged In")
         return redirect(url_for('login'))
@@ -39,6 +43,7 @@ def user():
 def logout():
     flash(f"You have been logged out, {user}", "info")
     session.pop('user', None)
+    session.pop['email', None]
     return redirect(url_for('login'))
 
 if __name__ == "__main__":
