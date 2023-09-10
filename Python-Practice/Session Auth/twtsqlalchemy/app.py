@@ -4,7 +4,7 @@ import sqlalchemy
 
 app = Flask(__name__)
 app.secret_key = 'Hello'
-app.permanent_session_lifetime = timedelta(minutes=5)
+app.permanent_session_lifetime = timedelta(minutes=30)
 
 @app.route("/")
 def home():
