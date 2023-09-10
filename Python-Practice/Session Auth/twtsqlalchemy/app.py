@@ -32,7 +32,7 @@ def user():
         if request.method == 'POST':
             email = request.form['email']
             session['email'] = email
-            flash('Email has been saved')
+            flash('Email was Saved!')
         else:
             if 'email' in session:
                 email = session['email']
