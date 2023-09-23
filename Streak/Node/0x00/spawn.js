@@ -6,7 +6,7 @@ var progs = {
     folder: 'mkdir'
 }
 
-var child = cp.spawn(progs.list);
+var child = cp.spawn(progs.list, ["-a"], {cwd:".."});
 child.stdout.on ('data', (data) => {
   console.log(`data\n${data}`)  
 });
