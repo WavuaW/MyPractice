@@ -5,17 +5,25 @@
     {{ customer_record.first_name }} {{ customer_record.last_name }}
     </div>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">      
+        <strong>Email: </strong>{{ customer_record.email }}</p>
+        <p class="card-text">  
+        <strong>Phone: </strong>{{ customer_record.phone }}</p>
+        <p class="card-text">  
+        <strong>Address: </strong>{{ customer_record.address }}</p>
+        <p class="card-text">  
+        <strong>State: </strong>{{ customer_record.state }}</p>
+        <p class="card-text">  
+        <strong>Zipcode: </strong>{{ customer_record.zipcode }}</p>
+        <p class="card-text">  
+        <strong>Created On: </strong>{{ customer_record.created_at }}</p>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-secondary">Send Promotion</a>
     </div>
   </div>
-        {{ customer_record.first_name }} {{ customer_record.last_name }} <br/>
-        {{ customer_record.email }} <br/>
-        {{ customer_record.phone }} <br/>
-        {{ customer_record.address }} <br/>
-        {{ customer_record.state }} <br/>
-        {{ customer_record.zipcode }} <br/>
-        {{ customer_record.created_at }} <br/>
-        {{ customer_record.id }} <br/>
+  <br/>
+ <a href="{% url "home" %}" class="btn btn-secondary">Back</a>
+
+ <a href="{% url "home" %}" class="btn btn-danger">Back</a>
+
 {% endblock content %}
