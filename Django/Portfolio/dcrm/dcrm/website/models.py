@@ -18,3 +18,6 @@ class Record(models.Model):
 class Photo(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='photos/')
+
+    def __str__(self):
+        return self.title
